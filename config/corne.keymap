@@ -20,11 +20,11 @@
 #define ONEPASS LG(BACKSLASH)
 
 &mt {
-    quick-tap-ms = <120>;
+    quick-tap-ms = <130>;
 };
 
 &lt {
-    quick-tap-ms = <120>;
+    quick-tap-ms = <130>;
 };
 
 / {
