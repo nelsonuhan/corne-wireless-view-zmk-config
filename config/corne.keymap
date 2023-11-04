@@ -20,11 +20,11 @@
 #define ONEPASS LG(BACKSLASH)
 
 &mt {
-    quick-tap-ms = <130>;
+    quick-tap-ms = <135>;
 };
 
 &lt {
-    quick-tap-ms = <130>;
+    quick-tap-ms = <135>;
 };
 
 / {
@@ -33,8 +33,8 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MODS";
                 #binding-cells = <2>;
-                tapping-term-ms = <170>;
-                quick-tap-ms = <130>;
+                tapping-term-ms = <175>;
+                quick-tap-ms = <135>;
                 flavor = "balanced";
                 bindings = <&kp>, <&kp>;
             };
