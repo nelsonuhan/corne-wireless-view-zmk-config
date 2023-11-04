@@ -19,6 +19,14 @@
 
 #define ONEPASS LG(BACKSLASH)
 
+&mt {
+    quick-tap-ms = <120>;
+};
+
+&lt {
+    quick-tap-ms = <120>;
+};
+
 / {
         behaviors {
             bhm: balanced_homerow_mods {
