@@ -72,7 +72,7 @@
    &trans  &none      &none      &none       &none      &none  &kp KP_SLASH   &kp N7  &kp N8  &kp N9  &kp KP_ASTERISK  &kp KP_EQUAL
    &trans  &kp LCTRL  &kp LALT   &kp LSHIFT  &kp LGUI   &none  &kp BACKSPACE  &kp N4  &kp N5  &kp N6  &kp KP_MINUS     &kp TAB
    &none   &kp LG(Z)  &kp LG(X)  &kp LG(C)   &kp LG(V)  &none  &none          &kp N1  &kp N2  &kp N3  &kp KP_PLUS      &kp KP_ENTER
-   &none   &trans  &trans  &trans  &kp N0  &none
+   &none   &trans  &trans  &trans  &kp N0  &trans
                         >;
                 };
 
@@ -82,7 +82,7 @@
    &none  &none     &kp LBRC  &kp RBRC  &kp CARET   &kp LT    &kp GT     &kp GRAVE  &kp PLUS      &kp AMPS     &none    &none
    &none  &kp EXCL  &kp LPAR  &kp RPAR  &kp DOLLAR  &kp BSLH  &kp FSLH   &kp MINUS  &kp EQUAL     &kp HASH     &kp SQT  &none
    &none  &kp AT    &kp LBKT  &kp RBKT  &kp UNDER   &kp PIPE  &kp QMARK  &kp TILDE  &kp ASTERISK  &kp PERCENT  &kp DQT  &none
-   &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &trans
                          >;
                 };
                 nav_layer {
@@ -91,16 +91,16 @@
    &none  &kp PG_UP  &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &kp HOME  &none  &none        &none       &none     &none      &none
    &none  &kp PG_DN  &kp LEFT      &kp DOWN  &kp RIGHT      &kp END   &none  &kp RGUI     &kp RSHIFT  &kp RALT  &kp RCTRL  &none
    &none  &none      &kp LG(LEFT)  &none     &kp LG(RIGHT)  &none     &none  &kp ONEPASS  &none       &none     &none      &none
-   &none  &none  &none  &none  &none  &none
+   &none  &none  &none  &none  &none  &trans
                          >;
                 };
                 adjust_layer {
                         label = "Adjust";
                         bindings = <
-   &none  &none  &none  &none  &none  &none  &none  &none         &none         &none         &none         &none
-   &none  &none  &none  &none  &none  &none  &none  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR 
-   &none  &none  &none  &none  &none  &none  &none  &none         &none         &none         &none         &none
-   &none  &none  &none  &none  &none  &none
+   &none  &tog 0  &tog 1  &tog 2  &tog 3  &none  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+   &none  &none   &none   &none   &none   &none  &none         &none         &none         &none         &none         &none
+   &none  &none   &none   &none   &none   &none  &none         &none         &none         &none         &none         &none
+   &none  &none   &none   &none   &none   &none
                         >;
                 };
         };
