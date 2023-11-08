@@ -16,6 +16,7 @@
 
 #define EMOJI LC(LG(SPACE))
 #define HYPER LC(LS(LA(LGUI))) 
+#define MEH LC(LS(LALT))
 
 #define ONEPASS LG(BACKSLASH)
 
@@ -62,8 +63,8 @@
                         bindings = <
    &kp TAB        &kp Q         &kp W        &kp E          &kp R        &kp T  &kp Y  &kp U        &kp I          &kp O        &kp P           &caps_word
    &mt LCTRL ESC  &bhm LCTRL A  &bhm LALT S  &bhm LSHIFT D  &bhm LGUI F  &kp G  &kp H  &bhm RGUI J  &bhm RSHIFT K  &bhm RALT L  &bhm RCTRL SQT  &kp EMOJI
-   &none          &kp Z         &kp X        &kp C          &kp V        &kp B  &kp N  &kp M        &cmsc          &dotcln      &kp SLASH       &none
-   &kp HYPER  &lt NUMBERS BACKSPACE  &lt SYMBOLS SPACE  &lt SYMBOLS SPACE  &lt NAV ENTER  &mo ADJUST  
+   &none          &kp Z         &kp X        &kp C          &kp V        &kp B  &kp N  &kp M        &cmsc          &dotcln      &kp SLASH       &mo ADJUST
+   &kp HYPER  &lt NUMBERS BACKSPACE  &lt SYMBOLS SPACE  &lt SYMBOLS SPACE  &lt NAV ENTER  &kp MEH
                         >;
                 };
                 numbers_layer {
