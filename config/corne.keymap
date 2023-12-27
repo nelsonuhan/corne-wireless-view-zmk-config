@@ -110,9 +110,9 @@
                 symbols_layer {
                         label = "Symbols";
                         bindings = <
-   &none  &none     &kp LBRC  &kp RBRC  &kp CARET   &kp LT    &kp GT     &kp GRAVE  &kp PLUS      &kp AMPS     &none    &none
-   &none  &kp EXCL  &kp LPAR  &kp RPAR  &kp DOLLAR  &kp BSLH  &kp FSLH   &kp MINUS  &kp EQUAL     &kp HASH     &kp SQT  &none
-   &none  &kp AT    &kp LBKT  &kp RBKT  &kp UNDER   &kp PIPE  &kp QMARK  &kp TILDE  &kp ASTERISK  &kp PERCENT  &kp DQT  &to BASE
+   &none  &none     &kp LBRC  &kp RBRC  &kp CARET   &kp LT    &kp GT     &kp TILDE  &kp PLUS      &kp AMPS     &kp GRAVE  &none
+   &none  &kp EXCL  &kp LPAR  &kp RPAR  &kp DOLLAR  &kp BSLH  &kp FSLH   &kp MINUS  &kp EQUAL     &kp HASH     &kp SQT    &none
+   &none  &kp AT    &kp LBKT  &kp RBKT  &kp UNDER   &kp PIPE  &kp QMARK  &kp UNDER  &kp ASTERISK  &kp PERCENT  &kp DQT    &to BASE
    &none  &none  &none  &none  &none  &trans
                          >;
                 };
