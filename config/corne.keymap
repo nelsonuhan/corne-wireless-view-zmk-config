@@ -26,11 +26,11 @@
 #define THUMBS 36 37 38 39 40 41
 
 &mt {
-    quick-tap-ms = <175>;
+    quick-tap-ms = <180>;
 };
 
 &lt {
-    quick-tap-ms = <175>;
+    quick-tap-ms = <180>;
 };
 
 / {
@@ -52,8 +52,8 @@
                 bindings = <&kp>, <&kp>;
                 flavor = "balanced";
                 tapping-term-ms = <280>;
-                quick-tap-ms = <175>;
-                require-prior-idle-ms = <125>;
+                quick-tap-ms = <180>;
+                require-prior-idle-ms = <100>;
                 hold-trigger-key-positions = <KEYS_R THUMBS>;
                 hold-trigger-on-release;
             };
@@ -64,8 +64,8 @@
                 bindings = <&kp>, <&kp>;
                 flavor = "balanced";
                 tapping-term-ms = <280>;
-                quick-tap-ms = <175>;
-                require-prior-idle-ms = <125>;
+                quick-tap-ms = <180>;
+                require-prior-idle-ms = <100>;
                 hold-trigger-key-positions = <KEYS_L THUMBS>;
                 hold-trigger-on-release;
             };
