@@ -83,6 +83,14 @@
                 bindings = <&kp DOT>, <&kp COLON>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
+            htcw: holdtap_capsword {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOLDTAP_CAPSWORD";
+                #binding-cells = <2>;
+                bindings = <&kp>, <&caps_word>;
+                flavor = "hold-preferred";
+                tapping-term-ms = <200>;
+            };
         };
 
         keymap {
@@ -91,10 +99,10 @@
                 base_layer {
                         label = "Base";
                         bindings = <
-   &kp TAB        &kp Q         &kp W        &kp E          &kp R        &kp T  &kp Y  &kp U        &kp I          &kp O        &kp P           &kp EMOJI
-   &mt LCTRL ESC  &thml LCTRL A &thml LALT S &thml LSHIFT D &thml LGUI F &kp G  &kp H  &thmr RGUI J &thmr RSHIFT K &thmr RALT L &thmr RCTRL SQT &caps_word
-   &mo ADJUST     &kp Z         &kp X        &kp C          &kp V        &kp B  &kp N  &kp M        &cmsc          &dotcln      &kp SLASH       &mo ADJUST
-   &kp HYPER  &lt NUMBERS BACKSPACE  &lt SYMBOLS SPACE  &lt SYMBOLS SPACE  &lt NAV ENTER  &kp MEH
+   &none      &kp Q         &kp W        &kp E          &kp R        &kp T  &kp Y  &kp U        &kp I          &kp O        &kp P           &kp EMOJI
+   &none      &thml LCTRL A &thml LALT S &thml LSHIFT D &thml LGUI F &kp G  &kp H  &thmr RGUI J &thmr RSHIFT K &thmr RALT L &thmr RCTRL SQT &caps_word
+   &mo ADJUST &kp Z         &kp X        &kp C          &kp V        &kp B  &kp N  &kp M        &cmsc          &dotcln      &kp SLASH       &mo ADJUST
+   &mt HYPER EMOJI  &lt NUMBERS ESC  &lt SYMBOLS BACKSPACE  &lt SYMBOLS SPACE  &lt NAV ENTER  &htcw MEH 0
                         >;
                 };
                 numbers_layer {
@@ -103,17 +111,17 @@
    &trans    &none      &none      &none       &none      &none  &none  &kp N7  &kp N8  &kp N9  &none      &none
    &trans    &kp LCTRL  &kp LALT   &kp LSHIFT  &kp LGUI   &none  &none  &kp N4  &kp N5  &kp N6  &kp ENTER  &none
    &to BASE  &kp LG(Z)  &kp LG(X)  &kp LG(C)   &kp LG(V)  &none  &none  &kp N1  &kp N2  &kp N3  &none      &to BASE
-   &none   &trans  &trans  &trans  &kp N0  &trans
+   &none   &trans  &trans  &trans  &kp N0  &none
                         >;
                 };
 
                 symbols_layer {
                         label = "Symbols";
                         bindings = <
-   &none     &none     &kp LBRC  &kp RBRC  &kp CARET   &kp LT    &kp GT     &kp TILDE  &kp PLUS      &kp AMPS     &kp GRAVE  &none
+   &none     &none     &kp LBRC  &kp RBRC  &kp CARET   &kp PIPE  &kp QMARK  &kp TILDE  &kp PLUS      &kp AMPS     &kp GRAVE  &none
    &none     &kp EXCL  &kp LPAR  &kp RPAR  &kp DOLLAR  &kp BSLH  &kp FSLH   &kp MINUS  &kp EQUAL     &kp HASH     &kp SQT    &none
-   &to BASE  &kp AT    &kp LBKT  &kp RBKT  &kp UNDER   &kp PIPE  &kp QMARK  &kp UNDER  &kp ASTERISK  &kp PERCENT  &kp DQT    &to BASE
-   &none  &none  &none  &none  &none  &trans
+   &to BASE  &kp AT    &kp LBKT  &kp RBKT  &kp UNDER   &kp LT    &kp GT     &kp UNDER  &kp ASTERISK  &kp PERCENT  &kp DQT    &to BASE
+   &none  &none  &kp DEL  &kp TAB  &none  &trans
                          >;
                 };
                 nav_layer {
@@ -122,7 +130,7 @@
    &none     &none      &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &none     &none  &none            &none            &none     &none      &none
    &none     &kp PG_UP  &kp LEFT      &kp DOWN  &kp RIGHT      &kp HOME  &none  &kp RGUI         &kp RSHIFT       &kp RALT  &kp RCTRL  &none
    &to BASE  &kp PG_DN  &kp LG(LEFT)  &none     &kp LG(RIGHT)  &kp END   &none  &kp OP_AUTOFILL  &kp OP_QUICKACC  &none     &none      &to BASE
-   &none  &kp DEL &none  &none  &none  &trans
+   &none  &none  &none  &none  &none  &trans
                          >;
                 };
                 adjust_layer {
