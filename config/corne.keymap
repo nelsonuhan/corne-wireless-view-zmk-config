@@ -122,7 +122,7 @@
    &none     &none      &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &none     &none  &none            &none            &none     &none      &none
    &none     &kp PG_UP  &kp LEFT      &kp DOWN  &kp RIGHT      &kp HOME  &none  &kp RGUI         &kp RSHIFT       &kp RALT  &kp RCTRL  &none
    &to BASE  &kp PG_DN  &kp LG(LEFT)  &none     &kp LG(RIGHT)  &kp END   &none  &kp OP_AUTOFILL  &kp OP_QUICKACC  &none     &none      &to BASE
-   &none  &none  &none  &none  &none  &trans
+   &none  &kp DEL &none  &none  &none  &trans
                          >;
                 };
                 adjust_layer {
