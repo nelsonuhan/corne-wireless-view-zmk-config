@@ -102,7 +102,7 @@
    &none      &kp Q         &kp W        &kp E          &kp R        &kp T  &kp Y  &kp U        &kp I          &kp O        &kp P           &kp EMOJI
    &none      &thml LCTRL A &thml LALT S &thml LSHIFT D &thml LGUI F &kp G  &kp H  &thmr RGUI J &thmr RSHIFT K &thmr RALT L &thmr RCTRL SQT &caps_word
    &mo ADJUST &kp Z         &kp X        &kp C          &kp V        &kp B  &kp N  &kp M        &cmsc          &dotcln      &kp SLASH       &mo ADJUST
-   &mt HYPER EMOJI  &lt NUMBERS ESC  &lt SYMBOLS BACKSPACE  &lt SYMBOLS SPACE  &lt NAV ENTER  &htcw MEH 0
+   &htcw HYPER 0 &lt NUMBERS BACKSPACE &lt SYMBOLS ESC &lt SYMBOLS SPACE  &lt NAV ENTER  &mt MEH EMOJI
                         >;
                 };
                 numbers_layer {
@@ -130,7 +130,7 @@
    &none     &none      &kp LA(LEFT)  &kp UP    &kp LA(RIGHT)  &none     &none  &none            &none            &none     &none      &none
    &none     &kp PG_UP  &kp LEFT      &kp DOWN  &kp RIGHT      &kp HOME  &none  &kp RGUI         &kp RSHIFT       &kp RALT  &kp RCTRL  &none
    &to BASE  &kp PG_DN  &kp LG(LEFT)  &none     &kp LG(RIGHT)  &kp END   &none  &kp OP_AUTOFILL  &kp OP_QUICKACC  &none     &none      &to BASE
-   &none  &none  &none  &none  &none  &trans
+   &none  &none  &none  &none  &none  &none
                          >;
                 };
                 adjust_layer {
