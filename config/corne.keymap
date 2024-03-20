@@ -83,13 +83,19 @@
                 bindings = <&kp DOT>, <&kp COLON>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
             };
-            htcw: holdtap_capsword {
-                compatible = "zmk,behavior-hold-tap";
-                label = "HOLDTAP_CAPSWORD";
-                #binding-cells = <2>;
-                bindings = <&kp>, <&caps_word>;
-                flavor = "hold-preferred";
-                tapping-term-ms = <200>;
+        };
+
+        combos {
+            compatible = "zmk,combos";
+            combo_caps_word {
+                timeout-ms = <50>;
+                key-positions = <26 27>;
+                bindings = <&caps_word>;
+            };
+            combo_emoji {
+                timeout-ms = <50>;
+                key-positions = <32 33>;
+                bindings = <&kp EMOJI>;
             };
         };
 
@@ -99,18 +105,18 @@
                 base_layer {
                         label = "Base";
                         bindings = <
-   &none      &kp Q         &kp W        &kp E          &kp R        &kp T  &kp Y  &kp U        &kp I          &kp O        &kp P           &kp EMOJI
-   &none      &thml LCTRL A &thml LALT S &thml LSHIFT D &thml LGUI F &kp G  &kp H  &thmr RGUI J &thmr RSHIFT K &thmr RALT L &thmr RCTRL SQT &caps_word
+   &none      &kp Q         &kp W        &kp E          &kp R        &kp T  &kp Y  &kp U        &kp I          &kp O        &kp P           &none
+   &none      &thml LCTRL A &thml LALT S &thml LSHIFT D &thml LGUI F &kp G  &kp H  &thmr RGUI J &thmr RSHIFT K &thmr RALT L &thmr RCTRL SQT &none
    &mo ADJUST &kp Z         &kp X        &kp C          &kp V        &kp B  &kp N  &kp M        &cmsc          &dotcln      &kp SLASH       &mo ADJUST
-   &htcw HYPER 0 &lt NUMBERS BACKSPACE &lt SYMBOLS ESC &lt SYMBOLS SPACE  &lt NAV ENTER  &mt MEH EMOJI
+   &kp HYPER &lt NUMBERS BACKSPACE &lt SYMBOLS ESC &lt SYMBOLS SPACE  &lt NAV ENTER  &kp MEH
                         >;
                 };
                 numbers_layer {
                         label = "Numbers";
                         bindings = <
-   &trans    &none      &none      &none       &none      &none  &none  &kp N7  &kp N8  &kp N9  &none      &none
-   &trans    &kp LCTRL  &kp LALT   &kp LSHIFT  &kp LGUI   &none  &none  &kp N4  &kp N5  &kp N6  &kp ENTER  &none
-   &to BASE  &kp LG(Z)  &kp LG(X)  &kp LG(C)   &kp LG(V)  &none  &none  &kp N1  &kp N2  &kp N3  &none      &to BASE
+   &trans    &none      &none      &none       &none      &none  &none   &kp N7  &kp N8  &kp N9  &none      &none
+   &trans    &kp LCTRL  &kp LALT   &kp LSHIFT  &kp LGUI   &none  &kp TAB &kp N4  &kp N5  &kp N6  &kp ENTER  &none
+   &to BASE  &kp LG(Z)  &kp LG(X)  &kp LG(C)   &kp LG(V)  &none  &none   &kp N1  &kp N2  &kp N3  &none      &to BASE
    &none   &trans  &trans  &trans  &kp N0  &none
                         >;
                 };
