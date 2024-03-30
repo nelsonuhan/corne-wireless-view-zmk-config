@@ -129,9 +129,9 @@
                 symbols_layer {
                         display-name = "Symbols";
                         bindings = <
-   &none     &none     &kp LBRC  &kp RBRC  &kp CARET   &kp PIPE  &kp QMARK  &kp TILDE  &kp PLUS      &kp AMPS     &kp GRAVE  &none
-   &none     &kp EXCL  &kp LPAR  &kp RPAR  &kp DOLLAR  &kp BSLH  &kp FSLH   &kp MINUS  &kp EQUAL     &kp HASH     &kp SQT    &none
-   &to BASE  &kp AT    &kp LBKT  &kp RBKT  &kp UNDER   &kp LT    &kp GT     &kp UNDER  &kp ASTERISK  &kp PERCENT  &kp DQT    &to BASE
+   &none     &none     &kp LBRC  &kp RBRC  &kp CARET  &kp PIPE  &kp QMARK &kp TILDE  &kp LT       &kp GT   &none       &none
+   &none     &kp EXCL  &kp LPAR  &kp RPAR  &kp DOLLAR &kp BSLH  &kp FSLH  &kp MINUS  &kp EQUAL    &kp HASH &kp GRAVE   &none
+   &to BASE  &kp AT    &kp LBKT  &kp RBKT  &kp AMPS   &none     &none     &kp UNDER  &kp ASTERISK &kp PLUS &kp PERCENT &to BASE
    &none  &trans  &kp ESC  &kp ESC  &trans  &none
                          >;
                 };
