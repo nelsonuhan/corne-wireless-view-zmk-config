@@ -1,0 +1,236 @@
+layout: {qmk_keyboard: corne_rotated, qmk_layout: LAYOUT_split_3x6_3}
+layers:
+  Base:
+  - ''
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - ''
+  - ''
+  - {t: A, h: LCTRL}
+  - {t: S, h: LALT}
+  - {t: D, h: LSHIFT}
+  - {t: F, h: LGUI}
+  - {t: G, h: Hyper}
+  - {t: H, h: Hyper}
+  - {t: J, h: RGUI}
+  - {t: K, h: RSHIFT}
+  - {t: L, h: RALT}
+  - {t: '''', h: RCTRL}
+  - ''
+  - ''
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - /
+  - ''
+  - ''
+  - {t: BSPC, h: Numbers}
+  - {t: TAB, h: Symbols}
+  - {t: SPACE, h: Symbols}
+  - {t: ENTER, h: Nav}
+  - ''
+  Numbers:
+  - ''
+  - {t: Base, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - ''
+  - ''
+  - ''
+  - LCTRL
+  - LALT
+  - LSHIFT
+  - LGUI
+  - Hyper
+  - TAB
+  - '4'
+  - '5'
+  - '6'
+  - ENTER
+  - ''
+  - ''
+  - Gui+ Z
+  - Gui+ X
+  - Gui+ C
+  - Gui+ V
+  - ''
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - ''
+  - ''
+  - {t: BSPC, type: held}
+  - TAB
+  - SPACE
+  - '0'
+  - ''
+  Symbols:
+  - ''
+  - {t: Base, h: toggle}
+  - '{'
+  - '}'
+  - ^
+  - '|'
+  - '&'
+  - '~'
+  - <
+  - '>'
+  - ''
+  - ''
+  - ''
+  - '!'
+  - (
+  - )
+  - $
+  - \
+  - /
+  - '-'
+  - '='
+  - '#'
+  - '`'
+  - ''
+  - ''
+  - '@'
+  - '['
+  - ']'
+  - '%'
+  - ''
+  - ''
+  - _
+  - '*'
+  - +
+  - '?'
+  - ''
+  - ''
+  - ''
+  - {t: ESC, type: held}
+  - ESC
+  - ''
+  - ''
+  Nav:
+  - ''
+  - {t: Base, h: toggle}
+  - Alt+ LEFT
+  - UP
+  - Alt+ RIGHT
+  - HOME
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - PG UP
+  - LEFT
+  - DOWN
+  - RIGHT
+  - END
+  - Hyper
+  - RGUI
+  - RSHIFT
+  - RALT
+  - RCTRL
+  - ''
+  - ''
+  - PG DN
+  - Gui+ LEFT
+  - ''
+  - Gui+ RIGHT
+  - ''
+  - ''
+  - 1P Fill
+  - 1P Quick
+  - ''
+  - ''
+  - ''
+  - ''
+  - DEL
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  Adjust:
+  - ''
+  - {t: Base, h: toggle}
+  - {t: Numbers, h: toggle}
+  - {t: Symbols, h: toggle}
+  - {t: Nav, h: toggle}
+  - ''
+  - {t: BT, h: '4'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '0'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - 'BT CLR'
+  - ''
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - {type: held}
+  - ''
+combos:
+- p: [26, 27]
+  k: 'Caps Word'
+  l: [Base]
+  w: 40
+  h: 35
+- p: [32, 33]
+  k: Emoji
+  l: [Base]
+  w: 40
+- p: [38, 39]
+  k: ESC
+  l: [Base, Numbers, Symbols, Nav]
+- p: [37, 40]
+  k: Adjust
+  l: [Base]
+  a: bottom
+  o: 1
+  w: 45
