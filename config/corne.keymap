@@ -53,7 +53,7 @@
                 flavor = "balanced";
                 tapping-term-ms = <280>;
                 quick-tap-ms = <180>;
-                require-prior-idle-ms = <100>;
+                require-prior-idle-ms = <95>;
                 hold-trigger-key-positions = <KEYS_R THUMBS>;
                 hold-trigger-on-release;
             };
@@ -65,7 +65,7 @@
                 flavor = "balanced";
                 tapping-term-ms = <280>;
                 quick-tap-ms = <180>;
-                require-prior-idle-ms = <100>;
+                require-prior-idle-ms = <95>;
                 hold-trigger-key-positions = <KEYS_L THUMBS>;
                 hold-trigger-on-release;
             };
