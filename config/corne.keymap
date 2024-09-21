@@ -4,15 +4,21 @@
  * SPDX-License-Identifier: MIT
  */
 
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1500
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20
+
 #include <behaviors.dtsi>
+#include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/bt.h>
 
 #define BASE    0
 #define NUMBERS 1
 #define SYMBOLS 2
 #define NAV     3
-#define ADJUST  4
+#define MOUSE   4
+#define ADJUST  5
 
 #define EMOJI LC(LG(SPACE))
 #define HYPER LC(LA(LS(LGUI)))
@@ -31,6 +37,18 @@
 
 &lt {
     quick-tap-ms = <180>;
+};
+
+&mmv {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <500>;
+    delay-ms = <0>;
+};
+
+&msc {
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <40>;
+    delay-ms = <0>;
 };
 
 / {
@@ -159,11 +177,20 @@
                 nav_layer {
                         display-name = "Nav";
                         bindings = <
-   &none &none    &kp PG_UP    &none    &kp PG_DN     &none    &none   &kp OP_AUTOFILL &kp OP_QUICKACC &none    &none      &none
    &none &to BASE &kp LA(LEFT) &kp UP   &kp LA(RIGHT) &kp HOME &none     &bt BT_NXT &bt BT_PRV      &none           &none      &none
    &none &none    &kp LEFT     &kp DOWN &kp RIGHT     &kp END  &kp MEH   &kp RGUI   &kp RSHIFT      &kp RALT        &kp RCTRL  &none
+   &none &none    &kp PG_UP    &none    &kp PG_DN     &none    &none     &mo MOUSE  &kp OP_AUTOFILL &kp OP_QUICKACC &none      &none
    &none  &kp DEL  &none  &none  &none  &none
                          >;
+                };
+                mouse_layer {
+                        display-name = "Mouse";
+                        bindings = <
+   &none &none &none          &mmv MOVE_UP   &none           &msc SCRL_DOWN &none &none &none &none &none &none
+   &none &none &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &msc SCRL_UP   &none &none &none &none &none &none
+   &none &none &none          &none          &none           &none          &none &none &none &none &none &none
+   &none &mkp LCLK &mkp RCLK &none  &none  &none
+                        >;
                 };
                 adjust_layer {
                         display-name = "Adjust";
